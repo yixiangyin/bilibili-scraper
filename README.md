@@ -19,6 +19,7 @@ With this tool, users can quickly and efficiently gather data from Bilibili with
 - Inside the project directory, run `python main.py <keyword> [page limit]`
 - keyword can be anything
 - page limit is optional and it has to be greater than 0
+- The csv filename will be scraped_data_keyword.csv
 
 ## Additional Information
 - Make sure you have a fast internet because if you have a slow one, for the code to work as expect, you might need to adjust waiting time longer for the browser to load the content.
