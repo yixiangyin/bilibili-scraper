@@ -1,7 +1,7 @@
 # bilibili-scraper
 ## Team Members
 This section is a list of team members, and possibly links to GitHub/GitLab/LinkedIn/personal blog pages for members.
-- [Yixiang](https://github.com/yixiangyin/bilibili-scraper/edit/main/README.md)
+- [Yixiang](https://github.com/yixiangyin/)
 ## Tool Description
 This sections discusses the purpose and motivation for the tool, and how it addresses a tool need you've identified.
 
