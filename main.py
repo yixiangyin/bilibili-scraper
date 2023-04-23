@@ -36,7 +36,7 @@ def main():
   word_to_search = sys.argv[1]
   secure_num = secrets.randbelow(500000)
   # go to the website and use a random number to bypass the checking
-  page_to_scrape.get("https://search.bilibili.com/all?"+"vt="+str(secure_num)+"&"+"keyword="+word_to_search)
+  page_to_scrape.get("https://search.bilibili.com/all?"+ "&from_source=webtop_search&"+"vt="+str(secure_num)+"&"+"keyword="+word_to_search)
   # go to video tab
   tabs = page_to_scrape.find_elements(By.CSS_SELECTOR, "span.vui_tabs--nav-text")
   for tab in tabs:
@@ -61,13 +61,13 @@ def main():
       next_page_button = page_to_scrape.find_elements(By.CSS_SELECTOR, "button.vui_pagenation--btn-side")[1]
       if (elementHasClass(next_page_button, "vui_button--disabled")):
         break;
+      page_counter+=1
+      if (page_counter == limit):
+        break
       # go to the next page
       next_page_button.click()
       # wait to load
       time.sleep(3)
-      page_counter+=1
-      if (page_counter == limit):
-        break
   file.close()
 
 main()
