@@ -20,10 +20,19 @@ page_to_scrape.get("https://search.bilibili.com/all?keyword="+word_to_search)
 # get data 
 
 # go to next page until there is no next page
+while True:
+  try:
+    # page_to_scrape.execute_script("window.scrollTo(0, Y)") 
+    page_to_scrape.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(3)
+    page_to_scrape.find_elements(By.CSS_SELECTOR, "button.vui_pagenation--btn-side")[1].click()
+    time.sleep(3)
+  except NoSuchElementException:
+    print("end of the list!")
+    break;
 # searchBox = page_to_scrape.find_element(By.CLASS_NAME, "nav-search-input")
 # searchBox.send_keys("厨房")
 # page_to_scrape.find_element(By.CLASS_NAME, "nav-search-btn").find_element(By.CSS_SELECTOR, "path").click;
-time.sleep(3)
 # username = page_to_scrape.find_element(By.ID, "username")
 # password = page_to_scrape.find_element(By.ID, "password")
 # username.send_keys("admin")
