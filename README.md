@@ -1,6 +1,7 @@
 # bilibili-scraper
 ## Team Members
-- [Yixiang](https://github.com/yixiangyin/)
+- [Yixiang Yin](https://github.com/yixiangyin/)
+- [Bogong Wang](https://github.com/bogongwang/)
 ## Tool Description
 The Bilibili Scraper is a web scraping tool designed to extract all the video names by keyword from the Chineses famous video website Bilibili.
 With this tool, users can quickly and efficiently gather data from Bilibili without having to manually search for and record video titles.
