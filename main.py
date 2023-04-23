@@ -10,7 +10,6 @@ from selenium.common.exceptions import NoSuchElementException
 
 # helper function
 def elementHasClass(element, active):
-    # print(element.get_attribute("class").split(" "))
     return active in element.get_attribute("class").split(" ")
  
 
